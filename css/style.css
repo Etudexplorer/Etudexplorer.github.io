@@ -74,6 +74,9 @@ main {
   padding: 20px;
 }
 
+.text-div
+{ background-color: #ddd;}
+
 article {
   margin-bottom: 20px;
 }
