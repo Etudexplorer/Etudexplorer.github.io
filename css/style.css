@@ -74,8 +74,10 @@ main {
   padding: 20px;
 }
 
-.text-div
-{ background-color: #ddd;}
+.text-div {
+   background-color: #ddd;
+   padding:20px;
+}
 
 article {
   margin-bottom: 20px;
