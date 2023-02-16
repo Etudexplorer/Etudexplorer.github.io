@@ -20,8 +20,8 @@ a:hover {color: #FEAA3E ;text-decoration: none;}
 header {
   display: flex;
   align-items: center;
-  background-color: #333;
-  color: #000000;
+  background-color: #000000;
+  color: #FFF;
   padding: 20px;
   min-height:50px;
 }
