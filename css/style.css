@@ -20,7 +20,7 @@ a:hover {color: #FEAA3E ;text-decoration: none;}
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribue l'espace également sur l'axe principal */
+  justify-content: space-between;
   background-color: #000000;
   color: #FFF;
   padding: 20px;
@@ -30,15 +30,15 @@ header {
 header img {
   height: auto;
   width: auto;
-  max-height: 50px; /* Contrôle la hauteur du logo */
-  max-width: 100px; /* Ajustez en fonction de la taille souhaitée pour votre logo */
+  max-height: 50px;
+  max-width: 100px;
   margin-right: 20px;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  align-items: center; /* Centre les éléments verticalement */
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -50,12 +50,12 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease; /* Transition douce pour les changements de couleur */
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #1DA1F2; /* Conservez la couleur de survol que vous aviez auparavant, par exemple, le bleu Twitter */
-  text-decoration: none; /* Aucun soulignement au survol */
+  color: #1DA1F2;
+  text-decoration: none;
 }
 
 
@@ -67,59 +67,59 @@ main {
 }
 
 #container {
-  display: flex; /* Utilise flexbox pour la disposition */
-  align-items: flex-start; /* Aligner les enfants en haut */
-  justify-content: center; /* Centrer les enfants sur l'axe principal */
-  gap: 20px; /* Ajoute de l'espace entre les éléments */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
 
 #map {
-  flex: 1; /* La carte prendra l'espace disponible */
-  max-width: 640px; /* Ou la largeur de votre iframe */
+  flex: 1; /
+  max-width: 640px; 
 }
 
-/* Ajoutez ceci pour vous assurer que la mise en page reste réactive */
+/* Assure que la mise en page reste réactive */
 @media (max-width: 768px) {
   #container {
-    flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+    flex-direction: column; 
   }
 
   #map, #text {
-    max-width: 100%; /* Les éléments prennent la pleine largeur sur les petits écrans */
+    max-width: 100%; 
   }
 }
 
 
 iframe {
-  border: none; /* Supprime la bordure par défaut */
-  border-radius: 15px; /* Coins arrondis pour un look plus doux */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour de la profondeur */
-  transition: box-shadow 0.3s ease-in-out; /* Effet de transition pour l'ombre */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 iframe:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 
 #text {
-  background-color: #f8f9fa; /* Couleur de fond légère pour le contraste */
-  border-radius: 8px; /* Coins arrondis pour le conteneur */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour une apparence en relief */
-  padding: 20px; /* Espacement interne */
-  margin: 20px 0; /* Espacement externe */
-  flex: 1; /* Le texte prendra l'espace disponible */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  flex: 1;
 }
 
 .text-div h2 {
-  color: #333; /* Couleur plus foncée pour le titre */
-  margin-bottom: 15px; /* Espacement en dessous du titre */
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .text-div p {
-  color: #555; /* Couleur pour le texte */
-  line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
-  margin-bottom: 10px; /* Espacement entre les paragraphes */
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 article {
@@ -198,7 +198,7 @@ footer a:hover {
 .faq-question {
   cursor: pointer;
   position: relative;
-  padding-right: 30px; /* make space for arrow */
+  padding-right: 30px; 
 }
 
 .faq-question .arrow {
@@ -207,7 +207,7 @@ footer a:hover {
   transition: transform 0.3s ease;
 }
 
-/* Rotate arrow when answer is shown */
+
 .faq-question.active .arrow {
   transform: rotate(-180deg);
 }
@@ -219,34 +219,34 @@ footer a:hover {
 
 
 #app .text-div {
-  background: white; /* Fond blanc pour la division de texte */
-  border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour une apparence en relief */
-  padding: 20px; /* Espacement interne */
-  max-width: 600px; /* Largeur maximale de la division de texte */
-  text-align: center; /* Centrer le texte */
+  background: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  max-width: 600px; 
+  text-align: center; 
 }
 
 #app h1 {
-  color: #333; /* Couleur foncée pour le titre */
-  margin-bottom: 15px; /* Espacement après le titre */
+  color: #333; 
+  margin-bottom: 15px; 
 }
 
 #app p {
-  color: #555; /* Couleur pour le paragraphe */
-  font-size: 1.1rem; /* Légèrement plus grande taille de police pour le paragraphe */
-  line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+  color: #555; 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
 }
 
 #app a {
-  color: #007bff; /* Couleur pour les liens, utilisez une couleur de marque si disponible */
-  text-decoration: none; /* Pas de soulignement */
-  font-weight: bold; /* Rend le texte du lien en gras */
-  transition: color 0.3s ease; /* Transition pour l'effet de survol */
+  color: #007bff;
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color 0.3s ease; 
 }
 
 #app a:hover {
-  color: #0056b3; /* Couleur plus foncée pour l'effet de survol */
-  text-decoration: underline; /* Soulignement au survol */
+  color: #0056b3;
+  text-decoration: underline;
 }
 
