@@ -31,7 +31,7 @@
         <div id="text">
             <div class="text-div">
                 <h2>Comment utiliser la carte ?</h2>
-                <p>La carte vous indique différents points d'intérêts qui pourraient vous être utile en tant
+                <p>La carte vous indique différents points d'intérêts qui pourraient vous être utiles en tant
                     qu'étudiant.</p>
                 <p>Vous avez accès à des filtres qui vous permettent d'afficher uniquement ce qui vous intéresse.</p>
                 <p>Faites glisser vos deux doigts sur la carte pour zoomer et déplacer votre position, ou cliquez
@@ -40,7 +40,23 @@
             </div>
         </div>
     </div>
-
+    <div id="chatbot">
+        <form id="chat-form" method="post">
+            <label for="user_input">Vous: </label>
+            <input type="text" name="user_input" id="user_input" required>
+            <br>
+            <label for="city">Votre ville: </label>
+            <input type="text" name="city" id="city" required>
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+        <div id="chat-response">
+            {% if user_input %}
+            <p><strong>Vous:</strong> {{ user_input }}</p>
+            <p><strong>Chatbot:</strong> {{ response }}</p>
+            {% endif %}
+        </div>
+    </div>
 </main>
 <footer>
     <nav>
