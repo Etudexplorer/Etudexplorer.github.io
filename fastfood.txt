@@ -1,0 +1,6 @@
+FastFood A, Paris
+FastFood B, Lyon
+FastFood C, Marseille
+FastFood A, Amiens
+FastFood B, Amiens
+FastFood C, Amiens
