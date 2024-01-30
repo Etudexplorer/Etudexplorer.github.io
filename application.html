@@ -2,17 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="author" content="Lucas EVRARD, Khoumba NDIAYE, Benjamin DUROZELLE, Yiduo ZHANG, Alexia M'BOUBA"/>
+    <meta name="author" content="Lucas EVRARD, Khoumba NDIAYE et  Benjamin DUROZELLE"/>
     <meta name="description"
           content=" Site web permettant aux étudiants d'avoir accès à une carte leur proposant des points d'intérêts utiles pour les aider durant leurs études."/>
     <meta name="keywords"
-          content="restaurants, bibiliothèques, activités, parcs, carte, map, Amiens, étudiants, étude, CROUS, France, lieux, UPJV, Picardie, université, "/>
+          content="carte, map, Amiens, restaurants, bibiliothèques, activités, parcs, étudiants, étude, CROUS, France, lieux, UPJV, Picardie, université, "/>
     <title>ETUDEXPLORER</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/ico" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
 <body>
-<link rel="icon" type="image/ico" href="../images/favicon.ico"/>
 <header>
-    <img src="../images/logo.png" alt="Logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>

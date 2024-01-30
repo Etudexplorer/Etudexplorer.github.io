@@ -1,35 +1,40 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Fonction pour obtenir des recommandations de fast-foods abordables
-def get_fastfood_recommendations(city):
-    # Charger les données des fast-foods depuis le fichier
-    with open('fastfoods.txt', 'r') as file:
-        fastfoods = [line.strip().split(', ') for line in file]
+# Logique factice pour simuler les recommandations
+def get_recommendations(category, city):
+    # Chargez les données depuis le fichier correspondant
+    filename = f'{category.lower()}.txt'
+    with open(filename, 'r') as file:
+        places = [line.strip().split(', ') for line in file]
 
-    # Filtrer les fast-foods par ville
-    recommendations = [name for name, location in fastfoods if location.lower() == city.lower()]
+    # Filtrer les lieux par ville
+    recommendations = [name for name, location in places if location.lower() == city.lower()]
 
     return recommendations
 
-# Route principale pour le chatbot
 @app.route('/', methods=['GET', 'POST'])
 def chatbot():
+    show_text_input = False
+    recommendations = []
+    contact_creators_text = None
+    report_error_text = None
+
     if request.method == 'POST':
         user_input = request.form['user_input']
-        city = request.form['city']
 
-        if 'où sont les fastfoods pas chers' in user_input.lower():
-            # Appel à la fonction pour obtenir des recommandations
-            recommendations = get_fastfood_recommendations(city)
-            response = f"Voici quelques fast-foods abordables à {city} :\n{', '.join(recommendations)}"
-        else:
-            response = "Désolé, je ne comprends pas. Pouvez-vous reformuler votre demande?"
+        if user_input == "Je veux contacter tes créateurs":
+            return "Contactez-nous à l'adresse e-mail : etudexplorers@gmail.com"
+        elif user_input == "Je veux reporter une erreur":
+            return "Envoyez un e-mail à etudexplorers@gmail.com"
+        elif user_input == "Je cherche un lieu":
+            show_text_input = True
+        elif user_input in ["Etudier", "Fastfood", "Divertissement", "Sport"]:
+            city = request.form['city']
+            recommendations = get_recommendations(user_input, city)
 
-        return render_template('index.html', user_input=user_input, response=response, city=city)
-
-    return render_template('index.html')
+    return render_template('index.html', show_text_input=show_text_input, recommendations=recommendations, contact_creators_text=contact_creators_text, report_error_text=report_error_text)
 
 if __name__ == '__main__':
     app.run(debug=True)
