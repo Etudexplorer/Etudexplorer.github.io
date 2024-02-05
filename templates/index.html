@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="author" content="Lucas EVRARD, Khoumba NDIAYE et  Benjamin DUROZELLE"/>
+    <meta name="author" content="Lucas EVRARD, Alexia M'BOUMBA, Khoumba NDIAYE et  Benjamin DUROZELLE"/>
     <meta name="description"
           content=" Site web permettant aux étudiants d'avoir accès à une carte leur proposant des points d'intérêts utiles pour les aider durant leurs études."/>
     <meta name="keywords"
@@ -17,9 +17,9 @@
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="faq.html">F.A.Q</a></li>
-            <li><a href="point.html">Ajouter un point sur la carte</a></li>
-            <li><a href="application.html">Téléchargez notre application !</a></li>
+            <li><a href="{{ url_for('faq') }}">F.A.Q</a></li>
+            <li><a href="{{ url_for('point') }}">Ajouter un point sur la carte</a></li>
+            <li><a href="{{ url_for('application') }}">Téléchargez notre application !</a></li>
         </ul>
     </nav>
 </header>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="chat-container">
-    <form method="post" action="/">
+    <form method="post" action="/index.html">
         <label for="user_input">Sélectionnez une option :</label>
         <button type="submit" name="user_input" value="Je cherche un lieu">Je cherche un lieu</button>
         <button type="submit" name="user_input" value="Je veux contacter tes créateurs">Je veux contacter tes créateurs</button>
@@ -50,7 +50,7 @@
     </form>
 
     {% if show_text_input %}
-        <form method="post" action="/">
+        <form method="post" action="/index.html">
             <label for="city">Nom de la ville :</label>
             <input type="text" name="city" required>
             <button type="submit" name="user_input" value="Etudier">Pour étudier pas cher</button>
@@ -75,8 +75,8 @@
     {% endif %}
 
     {% if report_error_text %}
-        <h2>Reporter une erreur :</h2>
-        <p>{{ report_error_text }}</p>
+         <h2>Reporter une erreur :</h2>
+         <p>{{ report_error_text }}</p>
     {% endif %}
 </div>
 
@@ -84,17 +84,15 @@
 <footer>
     <nav>
         <ul>
-            <li><a href="https://twitter.com/EtudExplorer" target="_blank"><img src="../images/twitter.png" width="25"
-                                                                                alt="Twitter"/></a></li>
-            <li><a href="https://www.instagram.com/etudexplorerfrance/" target="_blank"><img
-                    src="../images/instagram.png" width="25" alt="Instagram"/></a></li>
+            <li><a href="https://twitter.com/EtudExplorer" target="_blank"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter" width="25"></a></li>
+            <li><a href="https://www.instagram.com/etudexplorerfrance/" target="_blank"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram" width="25"></a></li>
         </ul>
     </nav>
     <p>
         Cliquez <a href="mailto:etudexplorer@gmail.com" target="_blank"> <i>ici</i> </a> pour nous contacter
     </p>
     <p>
-        Copyright © : Site Web fait par Khoumba NDIAYE, Benjamin DUROZELLE, Lucas EVRARD, Yiduo ZHANG et Alexia M'BOUBA
+        Copyright © : Site Web fait par Khoumba NDIAYE, Benjamin DUROZELLE, Lucas EVRARD et Alexia M'BOUBA
         <!-- et Des&Lwis -->
     </p>
 </footer>

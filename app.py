@@ -2,19 +2,28 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Logique factice pour simuler les recommandations
 def get_recommendations(category, city):
-    # Chargez les données depuis le fichier correspondant
     filename = f'{category.lower()}.txt'
     with open(filename, 'r') as file:
         places = [line.strip().split(', ') for line in file]
 
-    # Filtrer les lieux par ville
     recommendations = [name for name, location in places if location.lower() == city.lower()]
 
     return recommendations
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/application.html')
+def application():
+    return render_template('application.html')
+
+@app.route('/faq.html')
+def faq():
+    return render_template('faq.html')
+
+@app.route('/point.html')
+def point():
+    return render_template('point.html')
+
+@app.route('/index.html', methods=['GET', 'POST'])
 def chatbot():
     show_text_input = False
     recommendations = []
@@ -25,9 +34,9 @@ def chatbot():
         user_input = request.form['user_input']
 
         if user_input == "Je veux contacter tes créateurs":
-            return "Contactez-nous à l'adresse e-mail : etudexplorers@gmail.com"
+            contact_creators_text = "Contactez-nous à l'adresse e-mail : etudexplorers@gmail.com"
         elif user_input == "Je veux reporter une erreur":
-            return "Envoyez un e-mail à etudexplorers@gmail.com"
+            report_error_text = "Envoyez un e-mail à etudexplorers@gmail.com"
         elif user_input == "Je cherche un lieu":
             show_text_input = True
         elif user_input in ["Etudier", "Fastfood", "Divertissement", "Sport"]:
