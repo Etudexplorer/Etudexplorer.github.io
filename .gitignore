@@ -1,1 +1,15 @@
-.
+# Flask related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Environnement virtuel
+venv/
