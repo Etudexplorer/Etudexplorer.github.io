@@ -1,18 +1,14 @@
-McDonald's, Amiens
-KFC, Amiens
-Subway, Amiens
-Quick, Amiens
-Pizza Hut, Amiens
-Burger King, Rouen
-Domino's Pizza, Rouen
-Taco Bell, Rouen
-McDonald's, Paris
-Burger King, Paris
-Subway, Paris
-KFC, Paris
-Quick, Paris
-McDonald's, New-York
-Subway, New-York
-Taco Bell, New-York
-Pizza Hut, New-York
-Dunkin' Donuts, New-York
+Basic-Fit (7 Rue Noyon - 105 Av. de l'Europe - 22 Rue Général Leclerc), Amiens
+ONELIFE Fitnes (Rue Velasquez), Amiens
+Muaythai (5 Rue du Commandant Defontaine), Amiens
+Tennis Club (Chemin de Vauvoix - 10 All. des Tennis - 350 Rue Saint-Fuscien ), Amiens
+Amiens SC Boxe(Av. du Languedoc), Amiens
+Rugby Club (350 Rue Saint-Fuscien), Amiens
+Amiens Self Défense (6 Rue Ducange), Amiens
+Amiens Judo (Dojo du Coliseum Rue Caumartin), Amiens
+Amiens Patinge Club (Rue Caumartin), Amiens
+Athletic Club (1 Rue Lombards), Amiens
+Hockey Club (Rue Caumartin), Amiens
+Amiens Handball (36 Rue Jean-Marc Laurent), Amiens
+Femina Sport (88 Rue Valentin Hauy), Amiens
+Sport nautique Amiens (2 Bd du Cange), Amiens
