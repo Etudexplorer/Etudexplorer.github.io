@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import random  
 
 app = Flask(__name__)
 
@@ -7,7 +8,9 @@ def get_recommendations(category, city):
     with open(filename, 'r') as file:
         places = [line.strip().split(', ') for line in file]
 
-    recommendations = [name for name, location in places if location.lower() == city.lower()]
+    filtered_recommendations = [name for name, location in places if location.lower() == city.lower()]
+
+    recommendations = random.sample(filtered_recommendations, min(5, len(filtered_recommendations)))
 
     return recommendations
 
